@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Слой_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 262.5 137"
+	 enable-background="new 0 0 262.5 137" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  width="262.5" height="137" bottomLeftOrigin="true" x="103.4" y="-345.2"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<g>
+	<path fill="#3D3D3D" d="M94.9,87.1v10.9c-2.9,2-7.8,3.5-11.6,3.5c-8.4,0-14.6-5.9-14.6-13.9c0-8,6.4-13.8,15.2-13.8
+		c4.2,0,8.6,1.6,11.5,4.1l-4.6,5.5c-1.9-1.8-4.6-2.9-6.9-2.9c-3.9,0-6.9,3.1-6.9,7.1c0,4.2,3,7.2,6.9,7.2c1.1,0,2.6-0.4,4.1-1v-6.6
+		H94.9z"/>
+	<path fill="#3D3D3D" d="M106.3,96.9l-1.6,4.3h-8.3L107.9,74h8.3l11.2,27.2h-8.6l-1.6-4.3H106.3z M111.9,82.1l-3.3,8.9h6.6
+		L111.9,82.1z"/>
+	<path fill="#3D3D3D" d="M148.4,101.2l-11.5-15.1v15.1h-7.4V74h6.9l11.5,15.2V74h7.4v27.2H148.4z"/>
+	<path fill="#3D3D3D" d="M171.7,74c8.8,0,14.6,5.4,14.6,13.6c0,8.2-5.9,13.6-14.9,13.6h-11.6V74H171.7z M167.9,94.9h4.1
+		c3.7,0,6.2-2.9,6.2-7.2c0-4.4-2.7-7.3-6.6-7.3h-3.7V94.9z"/>
+	<path fill="#3D3D3D" d="M195.9,96.9l-1.6,4.3H186L197.6,74h8.3l11.2,27.2h-8.6l-1.6-4.3H195.9z M201.5,82.1l-3.3,8.9h6.6
+		L201.5,82.1z"/>
+	<path fill="#3D3D3D" d="M238.6,94.5v6.7h-19.5V74h8.1v20.4H238.6z"/>
+	<path fill="#3D3D3D" d="M249.4,80.2v5.4h12.1v6.2h-12.1v9.3h-8.1V74h21.1v6.2H249.4z"/>
+</g>
+<polygon fill="#E81A50" points="59,97.7 54.5,82.6 49.8,77.6 52.1,77.7 51.3,74.2 58.1,75.8 54.9,59.2 51.3,57.9 88.7,61.4 
+	56.9,47.5 45,0 32.1,41.8 10.6,52.2 17.6,52.1 0,62.8 22.8,58 15.7,83.9 19.5,94.6 23.1,105.6 23.1,105.6 32.9,111 50.8,137 
+	52.1,116.6 "/>
+</svg>
