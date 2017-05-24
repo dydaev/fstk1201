@@ -1,9 +1,9 @@
 
 $(document).ready(function() {
 
-	var speedChangePage = 5000;
-	var speedMovePage = 4000;
-	var speedCentralize = 3000;
+	var speedChangePage = 15000;
+	var speedMovePage = 10000;
+	var speedCentralize = 10000;
 
 
 	changeSlide($("figure.slide").first());	
@@ -15,11 +15,10 @@ $(document).ready(function() {
 		} else {
 			changeSlide($("figure.slide").first());	
 		}
-
 		//TODO fix bag with removing  class 'old-slide', why dont run oldSlyde.animate in second ring???
-		$("figure.old-slide").removeClass('old-slide');
-	}, speedChangePage);
 
+	}, speedChangePage);
+	//-----------------------------------------------------
 	//-----------------------CENTERIZER---------------------------------
 	function changeSlide(slide) {
 		var img = slide.find("img");
@@ -59,6 +58,7 @@ $(document).ready(function() {
 		}		
 		// alert (positionX+"="+offsetWidthImg+", "+positionY+"="+offsetHeightImg)
 
+		
 		img.animate({
 			left: "-=" + offsetWidthImg,
 			top: "-=" + offsetHeightImg,
@@ -67,20 +67,19 @@ $(document).ready(function() {
 
 		var endPosition = slide.width();
 
-		var oldSlide = $("figure.show-slide")
+		$("figure.old-slide").css("opacity", 1);
+		$("figure.old-slide").css("left", 0);
+		$("figure.old-slide").removeClass('old-slide')
 
-		oldSlide.addClass('old-slide').removeClass("show-slide");
+		var oldSlide = $("figure.show-slide")
+		oldSlide.addClass('old-slide');
+		oldSlide.removeClass("show-slide");
 
 		slide.addClass('show-slide');
 
-		oldSlide.animate({left: "+=" + endPosition, opacity: 0.2}, speedMovePage)
-				.delay(1)
-				.queue(function() {
-					$(this).css("left", 0);
-					$(this).css("opacity", 1);
-					$(this).removeClass('old-slide');
-				});
-		oldSlide = null;
-		slide = null;
+		$("figure.old-slide").animate({
+			left: "+=" + endPosition, 
+			opacity: 0
+		}, speedMovePage);
 	}
 });
