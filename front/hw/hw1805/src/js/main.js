@@ -18,7 +18,15 @@ $(document).ready(function() {
 		//TODO fix bag with removing  class 'old-slide', why dont run oldSlyde.animate in second ring???
 
 	}, speedChangePage);
-	//-----------------------------------------------------
+	//---------------------------SLIDER NAV-----------------------------
+	var countSlidez = $( "figure.slide" ).length;
+
+	for ( var i = 1; i <= countSlidez; i++) {
+		$( "#slider-navi" ).append("<a href='#'><div class='circle'></div></a>");
+	}
+	
+	$( "#slider-navi" ).css("left", "-=" + (countSlidez / 2) * 13 + ((countSlidez * 4) - 4);
+
 	//-----------------------CENTERIZER---------------------------------
 	function changeSlide(slide) {
 		var img = slide.find("img");
