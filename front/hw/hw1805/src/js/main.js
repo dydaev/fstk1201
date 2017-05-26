@@ -10,14 +10,20 @@ $(document).ready(function() {
 	startSlideTimer(1);
 
 	function startSlideTimer(slideId){
-		timerSlider = setInterval(function() {
-				if (
-						$.isNumeric(slideId)
-						&& slideId > 0
-						&& slideId < $( "#main-slider" ).children().size() - 1
-				){
-					changeSlide($("figure.slide").eq(slideId));
-				} else {	
+		if (
+			Number.isInteger(slideId)
+			&& slideId >= 0
+			&& slideId < $( "#main-slider" ).children().length - 2
+			){
+				console.log(slideId)
+
+				if($( ".old-slide" )) clearOldSlide();
+
+				changeSlide($("figure.slide").eq(slideId));
+				//startSlideTimer();
+			}
+			timerSlider = setInterval(function() {
+				if (!Number.isInteger(slideId)) {	
 					if ($( "#main-slider>.show-slide" ).next().prop("tagName") == "FIGURE") {
 						changeSlide($("#main-slider>.show-slide").next());	
 					} else {
@@ -27,7 +33,12 @@ $(document).ready(function() {
 				slideId = null;
 			}, speedChangePage);
 	}
-
+	function clearOldSlide() {
+		$("figure.old-slide").css("opacity", 1);
+		$("figure.old-slide").css("left", 0);
+		$("figure.old-slide").removeClass('old-slide');
+		$("div.circle-nav").css("opacity", 0.5);
+	}
 	//---------------------------SLIDER NAV-----------------------------
 	var countSlidez = $( "figure.slide" ).length;
 
@@ -36,11 +47,9 @@ $(document).ready(function() {
 	}
 	//$( "#slider-navi" ).css("left", "-=" + (countSlidez / 2) * 13 + ((countSlidez * 4) - 4);
 
-		$( ".circle-nav" ).click(function(e){
+		$( "div.circle-nav" ).click(function(e){
 			clearInterval(timerSlider);
-console.log(e.target)
-			alert($this.index())
-			// startSliderTimer(e.index());
+			startSlideTimer($(this).parent().index());
 		});
 	//-----------------------CENTERIZER---------------------------------
 	function changeSlide(slide) {
@@ -81,7 +90,6 @@ console.log(e.target)
 		}		
 		// alert (positionX+"="+offsetWidthImg+", "+positionY+"="+offsetHeightImg)
 
-		
 		img.animate({
 			left: "-=" + offsetWidthImg,
 			top: "-=" + offsetHeightImg,
@@ -90,10 +98,9 @@ console.log(e.target)
 
 		var endPosition = slide.width();
 
-		$("figure.old-slide").css("opacity", 1);
-		$("figure.old-slide").css("left", 0);
-		$("figure.old-slide").removeClass('old-slide');
-		$(".circle-nav").css("opacity", 0.5);
+		clearOldSlide()
+
+		$("div.circle-nav").eq(slide.index()).css("opacity", 1);
 
 		var oldSlide = $("figure.show-slide");
 		oldSlide.addClass('old-slide');
@@ -101,9 +108,8 @@ console.log(e.target)
 
 		slide.addClass('show-slide');
 
-		$("figure.slide").eq(slide.index()).css("opacity", 0.8);
 
-		$("figure.old-slide").animate({
+		$( "figure.old-slide" ).animate({
 			left: "+=" + endPosition, 
 			opacity: 0
 		}, speedMovePage);
